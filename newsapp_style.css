@@ -1,0 +1,206 @@
+/*  Search bar CSS */ 
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 30px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+}
+
+/* Search bar end */
+
+h1 {
+	text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background: #DFEFEC;
+	font-family: 'Open Sans', sans-serif;
+}
+/*
+main {
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+*/
+
+.container {
+	/* area of page that contains article cards */
+	width: 95%;
+	margin-top: 20px;
+  	position: relative;
+  	text-align:center;
+}
+
+.article {
+	margin: 10px;
+	border-radius: 10px;
+	width: 25%;
+	height: 40%;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	background-color: black;
+	color: white;
+	text-align: center;
+	vertical-align: top;
+}
+
+
+.articleImage {
+	width: 100%;
+	border-radius: 10px;
+	height: 170px;
+}
+
+.source {
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	margin: 20px;
+	color: blue;
+	background-color: lavender;
+	border-radius: 10px;
+	position: relative;
+	top: 30px;
+	left: 390px; /* how to align buttons across page? */
+}
+
+#sign-up, #log-in, #log-out, #update-pref {
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	margin: 10px;
+	color: black;
+	background-color: #88EFB8;
+	border-radius: 10px;
+	position: relative;
+	top: 5px;
+	float: right; /* how to align buttons across page? */
+	cursor: pointer;
+}
+/* Sign-up dialogue */
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+    background: #00d9ff;
+}
+
+/* Log in Modal */
+.roughModal {
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	width: 400px;
+	z-index: 100;
+	background: white;
+	padding: 30px;
+	display: none;
+	border-radius: 10px /* nothing happens here; weird */
+	border: 3px solid blue;
+}
+
+#logInButton { /*seems like input tags can't be styled? */
+	margin: 10px;
+	padding: 10px;
+	background: #00B4CC;
+}
+
+#log-out, #update-pref {
+	display: none; /* make sure to initially hide unless user is already signed in */
+}
+/*
+form.logInButton {
+	color: green;
+}
+*/
